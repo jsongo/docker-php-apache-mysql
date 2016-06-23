@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  apache-php:
+    image: apache
+    container_name: apache-php 
+    restart: always
+    environment:
+        VERSION: 1.0.3
+    network_mode: host
+    volumes:
+        - /data/apache/sites-enabled:/etc/apache2/sites-enabled
+        - ./ports.conf:/etc/apache2/ports.conf
+        - ./apache2.conf:/etc/apache2/apache2.conf
+        - /data/code/jinyu/Site:/var/www/html
+        - /data/code:/data/code
+        - /data/log:/data/log
