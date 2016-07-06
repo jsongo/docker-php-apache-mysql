@@ -17,6 +17,7 @@ RUN /usr/sbin/a2dismod 'mpm_*' && /usr/sbin/a2enmod mpm_prefork proxy_http rewri
 # other libs
 RUN apt-get update && apt-get install -y php5-curl
 RUN apt-get -y install php5-pgsql 
+RUN apt-get -y install php5-gd
 
 EXPOSE 8008
 
