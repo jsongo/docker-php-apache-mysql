@@ -18,6 +18,7 @@ RUN /usr/sbin/a2dismod 'mpm_*' && /usr/sbin/a2enmod mpm_prefork proxy_http rewri
 RUN apt-get update && apt-get install -y php5-curl
 RUN apt-get -y install php5-pgsql 
 RUN apt-get -y install php5-gd
+RUN apt-get -y install php5-redis
 # 时区
 RUN cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
 
